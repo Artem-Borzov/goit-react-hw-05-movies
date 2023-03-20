@@ -8,6 +8,7 @@ import {
   DescrItem,
   SubText,
   Link,
+  Poster,
 } from './MovieDetails.styled';
 import { fetchMovieById } from 'services/fetchApi';
 import { BackLink } from 'components/BackLink/BackLink';
@@ -38,7 +39,7 @@ const MovieDetails = () => {
 
   const poster = poster_path => {
     if (poster_path === null) {
-      return 'https://via.placeholder.com/300sx450.jpg';
+      return 'https://deutschothek.com/wp-content/uploads/2018/01/placeholder.png';
     }
     return `https://image.tmdb.org/t/p/w300${poster_path}`;
   };
@@ -52,7 +53,7 @@ const MovieDetails = () => {
           <BackLink to={backLinkHref}>Back</BackLink>
           <Container>
             <div>
-              <img
+              <Poster
                 src={`${poster(movie.poster_path)}`}
                 alt={`${movie.title || movie.original_title || movie.name}`}
               />

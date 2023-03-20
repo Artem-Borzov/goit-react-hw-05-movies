@@ -43,3 +43,7 @@ export const SubText = styled.p`
   padding: 12px 0;
   max-width: 500px;
 `;
+
+export const Poster = styled.img`
+  width: 300px;
+`;

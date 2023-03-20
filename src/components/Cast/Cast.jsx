@@ -22,7 +22,7 @@ const Cast = () => {
 
   const poster = profile_path => {
     if (profile_path === null) {
-      return 'https://via.placeholder.com/300sx450.jpg';
+      return 'https://via.placeholder.com/133x200.png';
     }
     return `https://image.tmdb.org/t/p/w300${profile_path}`;
   };
